@@ -230,8 +230,9 @@
   .site-footer h2{ color:#fff; font-size:1.5rem; max-width:28ch; }
   .site-footer p{ color:#D8E4DF; }
   .team{
-    margin-top:1.8rem; padding-top:1.6rem; border-top:1px solid rgba(255,255,255,0.2);
+    margin-top:1.8rem; padding-top:1.6rem; border-top:none;
     font-size:0.9rem; color:#C9D6D0;
+    padding-right:1rem;
   }
 
   @media (max-width: 880px){
@@ -300,6 +301,63 @@
     .lang-btn{ font-size:0.8rem; gap:0.4rem; padding:0.25rem 0.65rem 0.25rem 0.3rem; }
     .lang-code{ min-width:1.7rem; padding:0.25rem 0.3rem; font-size:0.66rem; }
   }
+
+  /* Links de contato e projetos */
+  .site-footer .wrap{ position:relative; }
+  .social-links{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:flex-end;
+    gap:0.75rem;
+    margin-top:0;
+    position:absolute;
+    right:1rem;
+    bottom:0;
+    max-width:48%;
+  }
+  .social-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.65rem;
+    min-height:48px;
+    padding:0.7rem 1.1rem;
+    border:1px solid rgba(255,255,255,0.28);
+    border-radius:12px;
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:transform .2s ease, background .2s ease, border-color .2s ease;
+  }
+  .social-link:hover{
+    transform:translateY(-3px);
+    background:rgba(255,255,255,0.16);
+    border-color:rgba(255,255,255,0.6);
+  }
+  .social-link img{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+  }
+  .social-link:focus-visible{
+    outline:3px solid #fff;
+    outline-offset:4px;
+  }
+  @media (max-width:760px){
+    .social-links{
+      position:static;
+      max-width:100%;
+      justify-content:flex-start;
+      margin-top:1.4rem;
+    }
+    .social-link{flex:1 1 100%;}
+  }
+  @media (max-width:560px){
+    .social-links{gap:0.7rem;}
+  }
+
 </style>
 </head>
 <body>
@@ -732,6 +790,30 @@
     <div class="team">
       DEVS : Davi Gomes · Eduardo Steinbach · Caiã Cavalheiro — DESI 2026/1 v1 
     </div>
+
+    <div class="social-links" aria-label="Links de contato e projetos">
+      <a class="social-link" href="https://wa.me/5548984330092"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Conversar pelo WhatsApp">
+        <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="">
+        WhatsApp
+      </a>
+
+      <a class="social-link" href="https://www.instagram.com/why_davys"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Visitar Instagram do Goulart">
+        <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="">
+        Instagram
+      </a>
+
+      <a class="social-link" href="https://davklg-projects.vercel.app"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Ver projetos no Vercel">
+        <img src="https://cdn.simpleicons.org/vercel/FFFFFF" alt="">
+        Meus projetos
+      </a>
+    </div>
+
   </div>
 </footer>
 
